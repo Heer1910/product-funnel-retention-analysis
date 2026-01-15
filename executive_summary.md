@@ -20,6 +20,16 @@ This analysis identifies where users drop off in the e-commerce product lifecycl
 * 📱 **Device Insight:** Problem is systemic across all devices (not UX-specific)
 * 💡 **Highest ROI:** Focus on product page engagement and next-day retention campaigns
 
+### Visual Summary
+
+**Funnel Analysis: 83% Drop-off at View → Add**
+
+![Funnel Conversion by Device](figures/funnel_conversion.png)
+
+**Retention Analysis: Catastrophic D0→D1 Churn**
+
+![Retention Curves by Device](figures/retention_curves.png)
+
 ---
 
 ## Key Findings
