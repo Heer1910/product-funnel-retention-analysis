@@ -1,0 +1,52 @@
+# .gitignore for Product Funnel & Retention Analysis
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# BigQuery credentials (NEVER COMMIT)
+*.json
+!requirements.txt
+*service-account*.json
+credentials*.json
+
+# Environment variables
+.env
+.env.local
+
+# Generated data (if caching query results locally)
+data/
+*.csv
+*.parquet
+
+# Logs
+*.log
+
+# OS
+Thumbs.db
