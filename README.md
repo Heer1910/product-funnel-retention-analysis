@@ -136,53 +136,6 @@ product-funnel-retention/
 
 ---
 
-## Setup Instructions
-
-### Prerequisites
-
-* **Python:** 3.9+
-* **Google Cloud:** BigQuery access (free tier sufficient)
-* **Authentication:** gcloud CLI or service account
-
-### Installation
-
-1. **Clone/download project:**
-```bash
-cd /path/to/product-funnel-retention
-```
-
-2. **Create virtual environment:**
-```bash
-python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
-
-3. **Install dependencies:**
-```bash
-pip install -r requirements.txt
-```
-
-4. **Authenticate to BigQuery:**
-
-**Option 1 - Application Default Credentials (recommended):**
-```bash
-gcloud auth application-default login
-```
-
-**Option 2 - Service Account:**
-```bash
-export GOOGLE_APPLICATION_CREDENTIALS="/path/to/service-account.json"
-```
-
-5. **Verify access:**
-```bash
-# Run test query in notebook or use bq CLI
-bq query --use_legacy_sql=false \
-  'SELECT COUNT(*) FROM `bigquery-public-data.ga4_obfuscated_sample_ecommerce.events_20210101`'
-```
-
----
-
 ## Quickstart (For Non-Technical Reviewers)
 
 To see the analysis without running code:
@@ -423,24 +376,10 @@ After completing this analysis:
 
 ---
 
-## Resume Positioning
-
-**Project Title:** Product Funnel & Retention Analysis (GA4 Event Data)
-
-**Key Takeaways:**
-* Defined production-grade funnel and retention metrics
-* Applied defensible SQL logic with user-level grain and strict ordering
-* Identified actionable product insights through segmentation
-* Demonstrated end-to-end analytics workflow: metrics → analysis → recommendations
-
-This project showcases **analytics decision-making**, not tool proficiency.
-
----
-
 ## Contact
 
 **Heer Patel**  
-[Your LinkedIn] | [Your GitHub] | [Your Email]
+[[My LinkedIn](https://www.linkedin.com/in/heerpatel19/)] | [[My Portfolio](https://heer1910.github.io)] | [[My Email](heerpatel7016@gmail.com)]
 
 ---
 
