@@ -1,7 +1,6 @@
 google-cloud-bigquery==3.14.1
 pandas==2.1.4
 matplotlib==3.8.2
-seaborn==0.13.1
 jupyter==1.0.0
 notebook==7.0.6
 db-dtypes==1.2.0
