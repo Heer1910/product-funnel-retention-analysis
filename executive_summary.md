@@ -12,6 +12,16 @@ This analysis identifies where users drop off in the e-commerce product lifecycl
 
 ---
 
+## Results At-a-Glance
+
+* 📉 **Overall Conversion:** 5.95% (view to purchase)
+* ⚠️ **Critical Drop-off:** 83% of users abandon at View → Add to Cart stage
+* 🚨 **D1 Retention Crisis:** Only 3.04% of users return next day (97% immediate churn)
+* 📱 **Device Insight:** Problem is systemic across all devices (not UX-specific)
+* 💡 **Highest ROI:** Focus on product page engagement and next-day retention campaigns
+
+---
+
 ## Key Findings
 
 ### 1. Funnel Conversion: Largest Drop-Off is View → Add to Cart
