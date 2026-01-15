@@ -120,53 +120,6 @@ product-funnel-retention/
 
 ---
 
-## Setup Instructions
-
-### Prerequisites
-
-* **Python:** 3.9+
-* **Google Cloud:** BigQuery access (free tier sufficient)
-* **Authentication:** gcloud CLI or service account
-
-### Installation
-
-1. **Clone/download project:**
-```bash
-cd /path/to/product-funnel-retention
-```
-
-2. **Create virtual environment:**
-```bash
-python3 -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
-
-3. **Install dependencies:**
-```bash
-pip install -r requirements.txt
-```
-
-4. **Authenticate to BigQuery:**
-
-**Option 1 - Application Default Credentials (recommended):**
-```bash
-gcloud auth application-default login
-```
-
-**Option 2 - Service Account:**
-```bash
-export GOOGLE_APPLICATION_CREDENTIALS="/path/to/service-account.json"
-```
-
-5. **Verify access:**
-```bash
-# Run test query in notebook or use bq CLI
-bq query --use_legacy_sql=false \
-  'SELECT COUNT(*) FROM `bigquery-public-data.ga4_obfuscated_sample_ecommerce.events_20210101`'
-```
-
----
-
 ## Usage
 
 ### Running the Analysis
@@ -261,36 +214,6 @@ jupyter notebook
 
 ---
 
-## Validation & Quality Checks
-
-### Automated Validations (in Notebook)
-
-1. **Funnel Monotonicity:**
-```python
-# User counts must decrease at each stage
-assert view_users >= add_users >= checkout_users >= purchase_users
-```
-
-2. **Week 0 Retention:**
-```sql
--- Week 0 retention should always be 100%
-SELECT * FROM retention_weekly WHERE week_number = 0 AND retention_rate < 99
-```
-
-3. **Data Type Checks:**
-* Verify no negative retention rates
-* Ensure conversion rates are between 0 and 1
-* Check for null device categories
-
-### Manual Validation Steps
-
-1. **Spot-check user journeys:** Sample 5-10 users, trace their events
-2. **Cross-reference metrics:** Funnel and retention should tell consistent story
-3. **Peer review SQL:** Have queries reviewed for correctness
-4. **Visual inspection:** Verify charts render correctly and are interpretable
-
----
-
 ## Known Limitations
 
 1. **Obfuscated Data:** GA4 demo dataset has anonymized values, limiting real-world applicability
@@ -306,32 +229,6 @@ SELECT * FROM retention_weekly WHERE week_number = 0 AND retention_rate < 99
 
 ---
 
-## Success Criteria
-
-This project is successful if:
-
-- [x] Funnel metrics computed at correct user grain
-- [x] Retention logic is correct and reproducible
-- [x] Findings consistent across funnel and retention views
-- [x] Recommendations are specific and testable
-- [x] SQL queries are readable and well-commented
-- [x] Visualizations clearly communicate findings
-- [x] Documentation explains decisions, not just tools
-
----
-
-## Next Steps
-
-After completing this analysis:
-
-1. **Validate Findings:** Present to stakeholders, gather feedback
-2. **Deep Dive:** Investigate largest drop-off stage with qualitative research
-3. **Experiment Design:** Propose A/B test to improve identified bottleneck
-4. **Longitudinal Analysis:** Track metrics over time to detect trends
-5. **Advanced Segmentation:** Add user demographics, acquisition channel
-
----
-
 ## Technologies Used
 
 * **SQL:** BigQuery Standard SQL
@@ -342,24 +239,10 @@ After completing this analysis:
 
 ---
 
-## Resume Positioning
-
-**Project Title:** Product Funnel & Retention Analysis (GA4 Event Data)
-
-**Key Takeaways:**
-* Defined production-grade funnel and retention metrics
-* Applied defensible SQL logic with user-level grain and strict ordering
-* Identified actionable product insights through segmentation
-* Demonstrated end-to-end analytics workflow: metrics → analysis → recommendations
-
-This project showcases **analytics decision-making**, not tool proficiency.
-
----
-
 ## Contact
 
 **Heer Patel**  
-[Your LinkedIn] | [Your GitHub] | [Your Email]
+[[My LinkedIn](https://www.linkedin.com/in/heerpatel19/)] | [[My GitHub](https://heer1910.github.io)] | [[My email](heerpatel7016@gmail.com)]
 
 ---
 
